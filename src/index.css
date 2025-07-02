@@ -1,9 +1,1 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-body {
-  background: rgba(120, 120, 120, 0.13);
-  min-height: 100vh;
-  margin: 0;
-  font-family: sans-serif;
-}
+@import "tailwindcss";
