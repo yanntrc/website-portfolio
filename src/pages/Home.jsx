@@ -8,7 +8,6 @@ function Home() {
         <h2 className="text-xl font-semibold text-blue-100 mb-6">
           Web & Blockchain Developer
         </h2>
-        <div className="bg-green-600 text-white p-8">TEST VERT</div>
         <div className="text-blue-100 font-medium mb-1">France</div>
       </section>
       
