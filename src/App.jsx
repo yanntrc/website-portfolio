@@ -1,18 +1,60 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+/* eslint-disable no-unused-vars */
+import { AnimatePresence, motion } from 'framer-motion'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Blog from './pages/Blog'
 
 export default function App() {
+  const location = useLocation()
+
   return (
     <div className="min-h-screen flex flex-col relative">
-      {/* Le contenu principal */}
+      {/* Le contenu principal avec transition */}
       <div className="flex-1">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
-        </Routes>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route
+              path="/"
+              element={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }} // ← 1 seconde !
+                >
+                  <Home />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/projects"
+              element={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                >
+                  <Projects />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/blog"
+              element={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                >
+                  <Blog />
+                </motion.div>
+              }
+            />
+          </Routes>
+        </AnimatePresence>
       </div>
 
       {/* Footer toujours en bas */}

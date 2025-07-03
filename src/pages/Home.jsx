@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
+import Header from '../components/Header'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-400 to-white flex flex-col md:flex-row items-stretch justify-center relative overflow-hidden">
-      
       
       <div
         className="pointer-events-none absolute top-1/2 left-[60%] w-[35vw] h-1 z-0"
