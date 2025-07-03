@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-400 to-white flex flex-col md:flex-row items-stretch justify-center relative overflow-hidden">
       
-    
+      
       <div
         className="pointer-events-none absolute top-1/2 left-[60%] w-[35vw] h-1 z-0"
         style={{
@@ -23,18 +23,18 @@ export default function Home() {
         </h1>
       </div>
 
-      {/* Liens géants à droite, en blanc */}
+      {/* Liens géants à droite, blanc, animés au hover/click */}
       <div className="flex flex-col justify-center items-end md:w-1/2 w-full gap-8 pr-12 md:pr-24 z-10">
         <Link
           to="/projects"
-          className="text-5xl md:text-7xl font-extrabold font-mono text-white hover:text-orange-300 transition-all duration-200 underline-offset-8 hover:underline"
+          className="text-5xl md:text-7xl font-extrabold font-mono text-white transition-all duration-200 hover:scale-105 hover:drop-shadow-lg active:scale-95"
           style={{ letterSpacing: '0.04em' }}
         >
           Projects
         </Link>
         <Link
           to="/blog"
-          className="text-5xl md:text-7xl font-extrabold font-mono text-white hover:text-orange-300 transition-all duration-200 underline-offset-8 hover:underline"
+          className="text-5xl md:text-7xl font-extrabold font-mono text-white transition-all duration-200 hover:scale-105 hover:drop-shadow-lg active:scale-95"
           style={{ letterSpacing: '0.04em' }}
         >
           Blog
