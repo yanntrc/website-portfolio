@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-60px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+.animate-slide-down {
+  animation: slideDown 0.9s cubic-bezier(.39,.58,.57,1) both;
+}
